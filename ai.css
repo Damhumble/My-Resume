@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F3F6F4;
+    color: #1E352B;
+    font-family: "Poppins", sans-serif;
+    padding: 40px 20px;
+}
+
+/* Top Heading & Divider */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-family: "Momo Trust Display", sans-serif;
+    font-size: 42px;
+    letter-spacing: 2px;
+    color: #1E352B;
+    margin-bottom: 15px;
+}
+
+hr {
+    border: none;
+    height: 4px;
+    width: 60%;
+    max-width: 850px;
+    background-color: #7C8B6E;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* 2x2 Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 equal columns */
+    gap: 30px; /* Space between the 4 boxes */
+    max-width: 900px;
+    margin: 0 auto; /* Centers the entire 2x2 grid on the page */
+}
+
+/* Individual Box Styling */
+.card {
+    background-color: #C5B087;
+    border: 12px solid #7C8B6E;
+    border-radius: 16px;
+    padding: 25px;
+    min-height: 350px;
+    box-shadow: 0 10px 25px rgba(30, 53, 43, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Subtle lift effect on hover */
+}
+
+h2 {
+    font-family: "Momo Trust Display", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: #1E352B;
+    text-align: center;
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(30, 53, 43, 0.25);
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #1E352B;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* Lists inside Education and Hobbies */
+ul, ol {
+    padding-left: 22px;
+    color: #1E352B;
+}
+
+li, .hob {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 6px;
+    text-align: left;
+}
+
+.thought-text {
+    font-style: italic;
+    line-height: 1.7;
+}
+
+/* Automatically stacks into 1 column on smaller phone screens */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,126 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #F3F6F4;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+}
+
+/* Main Decorative Card */
+.hero-card {
+    background-color: #FFFFFF;
+    border: 10px solid #7C8B6E;
+    border-radius: 24px;
+    padding: 50px 60px;
+    box-shadow: 0 20px 45px rgba(30, 53, 43, 0.15);
+    max-width: 780px;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.hero-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Side-by-Side Layout */
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+}
+
+/* Oval Profile Image */
+img {
+    border: 8px solid #1E352B;
+    height: 230px;
+    width: 165px;
+    object-fit: cover; /* Prevents the photo from looking stretched */
+    border-radius: 100px;
+    box-shadow: 0px 12px 25px rgba(30, 53, 43, 0.3);
+}
+
+/* Right Side Content with Vertical Divider */
+.intro-content {
+    border-left: 4px solid #1E352B;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.greeting {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #7C8B6E;
+    margin-bottom: 5px;
+}
+
+h1 {
+    font-family: 'Playfair Display SC', serif;
+    font-size: 42px;
+    color: #1E352B;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.tagline {
+    font-size: 16px;
+    color: #55665E;
+    margin-bottom: 28px;
+}
+
+/* Styled Resume Link Button */
+.resume-btn {
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Playfair Display SC', serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #1E352B;
+    background-color: #C5B087;
+    padding: 14px 28px;
+    border-radius: 8px;
+    border: 2px solid #1E352B;
+    box-shadow: 4px 4px 0px #1E352B;
+    transition: all 0.2s ease;
+}
+
+.resume-btn:hover {
+    background-color: #1E352B;
+    color: #F3F6F4;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #7C8B6E;
+}
+
+/* Mobile Responsive Layout */
+@media (max-width: 650px) {
+    .hero-card {
+        padding: 35px 25px;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .intro-content {
+        border-left: none;
+        border-top: 3px solid #1E352B;
+        padding-left: 0;
+        padding-top: 25px;
+        align-items: center;
+    }
+}
